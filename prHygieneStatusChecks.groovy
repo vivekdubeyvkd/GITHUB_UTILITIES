@@ -23,6 +23,10 @@ import groovy.json.JsonSlurper
        # GitHub Repo Admins can update and set this rule for concerned GitHub repo
  **/
 
+//
+//    Test this script in your test environment before using it in your production environment, make changes if required as per your environment setup etc
+//
+
 def checkAndUpdatePRStatus(String inputContext, String inputGithubCredentialsId, String inputDescription, String inputTargetUrl, Integer inputChangedCount, Integer inputChangedCountLimit) {
     if (inputChangedCount > inputChangedCountLimit) {
         status = "FAILURE"
